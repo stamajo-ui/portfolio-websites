@@ -4,7 +4,70 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>react-starter</title>
+    <meta name="theme-color" content="#4F46E5" />
+
+    <title>SWEBservices — AI Websites. Built Faster. Built Better.</title>
+    <meta
+      name="description"
+      content="Professional AI-powered websites, Shopify stores, and automation for small businesses, delivered in days instead of months. Free consultation."
+    />
+    <meta
+      name="keywords"
+      content="AI website design, small business website, Shopify store development, website agency, fast website design, AI web development"
+    />
+    <meta name="author" content="SWEBservices" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://swebservices.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="SWEBservices" />
+    <meta property="og:title" content="SWEBservices — AI Websites. Built Faster. Built Better." />
+    <meta
+      property="og:description"
+      content="Professional AI-powered websites, Shopify stores, and automation for small businesses, delivered in days instead of months."
+    />
+    <meta property="og:url" content="https://swebservices.com/" />
+    <meta property="og:image" content="https://swebservices.com/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SWEBservices — AI Websites. Built Faster. Built Better." />
+    <meta
+      name="twitter:description"
+      content="Professional AI-powered websites, Shopify stores, and automation for small businesses, delivered in days instead of months."
+    />
+    <meta name="twitter:image" content="https://swebservices.com/og-image.png" />
+
+    <script>
+      try {
+        var t = localStorage.getItem('swebservices-theme');
+        var isDark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', isDark);
+      } catch (e) {}
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SWEBservices",
+        "description": "AI-powered website design and development agency helping small businesses launch modern websites in days instead of months.",
+        "url": "https://swebservices.com/",
+        "logo": "https://swebservices.com/favicon.svg",
+        "image": "https://swebservices.com/og-image.png",
+        "priceRange": "$$",
+        "areaServed": "Worldwide",
+        "sameAs": ["https://linkedin.com/company/swebservices", "https://github.com/swebservices"],
+        "makesOffer": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Website Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shopify Store Development" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "WordPress Websites" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Optimization" } }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
