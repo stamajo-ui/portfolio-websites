@@ -1,42 +1,37 @@
-import { useRef, useEffect } from 'react'
-import { motion } from 'motion/react'
-import gsap from 'gsap'
-import './App.css'
+import { useLenis } from './hooks/useLenis'
+import { Navbar } from './components/Navbar'
+import { Hero } from './components/Hero'
+import { TrustBar } from './components/TrustBar'
+import { Mission } from './components/Mission'
+import { Portfolio } from './components/Portfolio'
+import { Services } from './components/Services'
+import { WhyChooseUs } from './components/WhyChooseUs'
+import { Process } from './components/Process'
+import { Testimonials } from './components/Testimonials'
+import { Faq } from './components/Faq'
+import { Contact } from './components/Contact'
+import { Footer } from './components/Footer'
 
 function App() {
-  const boxRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    gsap.fromTo(
-      boxRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
-    )
-  }, [])
+  useLenis()
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
-      <h1>React + TypeScript Starter</h1>
-      <p>GSAP and Motion (Framer Motion) are wired up and ready to use.</p>
-
-      <div ref={boxRef} style={{ marginTop: '1.5rem' }}>
-        <strong>GSAP</strong> animated this box in on load.
-      </div>
-
-      <motion.div
-        style={{
-          marginTop: '1rem',
-          padding: '1rem',
-          background: '#eee',
-          borderRadius: 8,
-          width: 200,
-        }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        Hover / tap me — powered by <strong>Motion</strong>.
-      </motion.div>
-    </div>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <TrustBar />
+        <Mission />
+        <Portfolio />
+        <Services />
+        <WhyChooseUs />
+        <Process />
+        <Testimonials />
+        <Faq />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   )
 }
 
